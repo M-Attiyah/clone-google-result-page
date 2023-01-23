@@ -1,0 +1,490 @@
+/* -------------------------------------------------------------------------- */
+/*                                  IMPORTING                                 */
+/* -------------------------------------------------------------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+/* -------------------------------------------------------------------------- */
+/*                           DECLARE COLOR VARIABLES                          */
+/* -------------------------------------------------------------------------- */
+
+:root {
+    /* Colors */
+    --body-bg: #202124;
+    --header-bg: #20212498;
+    --footer: #171717;
+    --heading-1: #8ab4f8;
+    --heading-2: #ffffff;
+    --body-txt-1: #bdc1c6;
+    --body-txt-2: #7ca6f8;
+    --body-txt-3: #929292;
+    --link: #8ab4f8;
+    --border: #3c4043;
+    --section: #303134;
+    --input: #303134;
+    --star: #ffa600;
+
+    /* Sizes */
+    --default: 14px;
+    --rs-url-sz: 1em;
+    --rs-heading-sz: 1.428em;
+    --rs-desc-sz: 1.0714em;
+    --rs-link-sz: 1em;
+    --rs-people-sz: 1rem;
+
+    --side-heading: 30px;
+    --side-subtitle: 14px;
+    --side-url: 14px;
+    --side-desc: 14px;
+
+    --nav-link: 1em;
+
+    --rel-heading: 1.5714em;
+    --rel-link: 1em;
+
+    --footer-location: 1.0714em;
+    --footer-link: 1em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    RESET                                   */
+/* -------------------------------------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--default);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--body-bg);
+}
+
+.container {
+    margin-left: 200px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg);
+    backdrop-filter: blur(10px);
+}
+
+header .logo {
+    max-width: 90px;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    background-color: var(--input);
+    border-radius: 1.5rem;
+    width: 650px;
+    padding: 0 1rem;
+    height: 46px;
+}
+
+header form input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--body-txt-1);
+    padding-left: 0.5rem;
+}
+
+header form input::placeholder {
+    color: var(--body-txt-1);
+}
+
+header form div {
+    display: flex;
+    gap: 0.5rem;
+    height: inherit;
+    align-items: center;
+}
+
+header form div i {
+    padding: 0 0.6rem;
+    font-size: 17px;
+    color: var(--body-txt-3);
+}
+
+header form div hr {
+    height: 60%;
+    border: 1px solid var(--border);
+}
+
+header .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .3rem;
+}
+
+header .right i {
+    font-size: 20px;
+    color: var(--body-txt-3);
+    width: 27px;
+    height: 27px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .right img {
+    width: 38px;
+    height: 38px;
+    padding: .2rem;
+}
+
+header .right img,
+header .right i {
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+header .right i:hover,
+header .right img:hover {
+    background-color: var(--input);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 NAVIGATION                                 */
+/* -------------------------------------------------------------------------- */
+
+.header-nav {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 630px;
+}
+
+.header-nav ul div {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-nav ul li {
+    color: var(--body-txt-3);
+}
+
+.header-nav ul li i {
+    margin-right: .3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    MAIN                                    */
+/* -------------------------------------------------------------------------- */
+
+main {
+    display: flex;
+    padding: 1.5rem 0;
+    justify-content: flex-start;
+    gap: 8rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    SIDE                                    */
+/* -------------------------------------------------------------------------- */
+
+aside {}
+
+
+.about-website {
+    max-width: 367px;
+    border: 1px solid var(--border);
+    border-radius: .4rem;
+    margin-top: 1rem;
+}
+
+
+.website-titles {
+    padding: 1rem;
+}
+.website-titles h2 {
+    font-size: var(--side-heading);
+    color: var(--heading-2);
+    font-weight: 400;
+}
+.website-titles p {
+    color: var(--body-txt-3);
+    font-size: var(--side-subtitle);
+    margin-top: .5rem;
+}
+
+
+.website-url {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.website-url i {
+    color: var(--body-txt-3);
+    font-size: 1.4rem;
+}
+.website-url a {
+    color: var(--link);
+    text-decoration: none;
+}
+.website-url a:hover {
+    text-decoration: underline;
+}
+
+
+.website-desc {
+    padding: 1rem;
+    line-height: 1.5;
+    color: var(--body-txt-1);
+}
+.website-desc a {
+    color: var(--link);
+    text-decoration: none;
+}
+.website-desc a:hover {
+    text-decoration: underline;
+}
+
+.website-more-desc {
+    padding: 0 1.1rem 1.1rem;
+}
+.website-more-desc p {
+    margin-bottom: .5rem;
+    color: var(--body-txt-1);
+}
+.website-more-desc p span {
+    font-weight: 600;
+    margin-right: .3rem;
+    letter-spacing: .5px;
+}
+.website-more-desc p a {
+    color: var(--link);
+    text-decoration: none;
+}
+.website-more-desc p a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   RESULT                                   */
+/* -------------------------------------------------------------------------- */
+
+.result {
+    width: 40em;
+    color: var(--body-txt-1);
+}
+
+.result:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.result-url {
+    cursor: pointer;
+}
+
+.result-url:hover + .result-title,
+.result-title:hover {
+    text-decoration: underline;
+}
+
+.result-title {
+    margin: .3rem 0 .5rem;
+    color: var(--heading-1);
+    font-weight: 400;
+    font-size: var(--rs-heading-sz);
+    cursor: pointer;
+}
+
+.result-desc {
+    margin-bottom: .3rem;
+    font-size: var(--rs-desc-sz);
+}
+
+.result-keywords {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.result-keywords .link {
+    color: var(--link);
+    text-decoration: none;
+    font-size: var(--rs-link-sz);
+}
+.result-keywords .link:hover {
+    text-decoration: underline;
+}
+
+.result-date {
+    color: var(--body-txt-3);
+}
+
+.result-video {
+    display: flex;
+    gap: 1rem;
+}
+
+.result-video iframe {
+    width: 30%;
+    height: 96px;
+}
+
+.also-search {
+    border-radius: .4rem;
+    border: 1px solid var(--section);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.also-search-title {
+    font-weight: 400;
+    font-size: var(--rs-people-sz);
+}
+
+.links {
+    margin-top: .5rem;
+    max-width: 31em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+.links a {
+    color: var(--link);
+    flex: 1 0 15em;
+    text-decoration: none;
+    font-size: var(--rs-link-sz);
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+.rates {
+    display: flex;
+    gap: 1rem;
+    margin-top: .4rem;
+}
+
+.rates .stars i {
+    color: var(--star);
+}
+
+.rates span {
+    color: var(--body-txt-3);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                              RELATED SEARCHES                              */
+/* -------------------------------------------------------------------------- */
+
+.related-searches {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.related-searches h2 {
+    color: var(--heading-2);
+    font-weight: 400;
+    font-size: var(--rel-heading);
+}
+
+.related-container {
+    width: 40em;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.related-container div {
+    background-color: var(--section);
+    flex: 1 0 18em;
+    padding: .8rem 2rem;
+    border-radius: 1.5rem;
+    color: var(--body-txt-1);
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.related-container p {
+    font-size: var(--rel-link);
+}
+
+.related-container div:hover p {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.related-container div span:not(span.material-symbols-outlined) {
+    font-weight: 600;
+}
+
+.related-container div span.material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+footer {
+    background-color: var(--footer);
+}
+
+footer p {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    color: var(--body-txt-1);
+    font-size: var(--footer-location);
+}
+
+.footer-nav nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 1.5rem;
+}
+
+.footer-nav nav ul li a {
+    color: var(--body-txt-1);
+    text-decoration: none;
+    font-size: var(--footer-link);
+    font-weight: 400;
+}
+.footer-nav nav ul li a:hover {
+    text-decoration: underline;
+}
